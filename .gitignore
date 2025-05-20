@@ -1,0 +1,4 @@
+.terraform
+secret_username.json
+secret_password.json
+.terraform.lock.hcl
