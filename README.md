@@ -14,19 +14,11 @@
         9.  Application Load Balancer
         10. Target Group
         11. RDS Postgres Instance
-        12. IAM Role AmazonEC2ContainerServiceforEC2Role
+        12. IAM Roles
         13.  Cloudwatch Alarms
                 13.1 Cloudwatch Alarm for CPUUtilization of above 60% for 5 minutes
                 13.2 Cloudwatch Alarm for CPUUtilization of below 40% for 20 minutes
                 13.3 Cloudwatch Alarm for CPUUtilization of above 60% for 20 minutes
-        14. ECR 3 Repos
-                14.1 db-migration
-                14.2 frontend
-                14.3 backend
-        15. ECS
-            15.1 db-migration task on fargate
-            15.2 frontend as service
-            15.3 backend as service
 
 ========================================================================
 
@@ -49,24 +41,6 @@ To Deploy this Infra please Follow below mentioned steps:
                     encrypt        = true
                   }
                 }
-
-        4). create two files in this directory:
-        
-            1). secret_username.json
-
-                +-------------------------------------------------+
-                +    {                                            +
-                +       "database_username": "your_username"      +
-                +    }                                            +
-                +-------------------------------------------------+
-
-            2). secret_password.json
-
-                +-------------------------------------------------+
-                +    {                                            +
-                +       "database_username": "your_password"      +
-                +    }                                            +
-                +-------------------------------------------------+
     
     5). Make sure you have terraform installed
 
